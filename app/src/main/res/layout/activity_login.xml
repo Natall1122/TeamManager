@@ -6,4 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".LoginActivity">
 
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_container"
+        android:name="es.nlc.teammanager.LoginFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></androidx.fragment.app.FragmentContainerView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

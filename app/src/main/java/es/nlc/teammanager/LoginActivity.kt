@@ -6,7 +6,7 @@ import android.os.Bundle
 import com.google.android.material.snackbar.Snackbar
 import es.nlc.teammanager.databinding.ActivityLoginBinding
 
-class LoginActivity : AppCompatActivity() {
+class LoginActivity : AppCompatActivity(), DialogFragment.DialogListener, LoginFragment.OnButtonsFragmentListener {
 
 
     private var registrat = false
