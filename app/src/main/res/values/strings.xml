@@ -1,15 +1,13 @@
 <resources>
     <string name="app_name">TeamManager</string>
-    <string name="inici">Iniciar Sessió</string>
-    <string name="nom">Nom d\'usuari: </string>
-    <string name="contraseña">Contraseyaa: </string>
-    <string name="log">ENTRAR</string>
-    <string name="reg">REGISTRAR-SE</string>
-    <string name="vale">Este serà el teu usuari, vale?</string>
-    <string name="creat">Usuari creat correctament</string>
-    <string name="ureg">Usuari registrat</string>
-    <string name="noreg">Deu crear un usuari abans de iniciar sessió, per favor registra\'t</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="inici">Login</string>
+    <string name="nom">User name: </string>
+    <string name="contraseña">Password: </string>
+    <string name="log">ENTER</string>
+    <string name="reg">SIGN UP</string>
+    <string name="vale">This will be your user, ok?</string>
+    <string name="creat">User created correctly</string>
+    <string name="ureg">User registered</string>
+    <string name="noreg">You must create a user before you can log in, please register.</string>
 
 </resources>

@@ -1,7 +1,14 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Theme.TeamManager" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="colorPrimary">@color/verd</item>
+        <item name="colorPrimaryVariant">@color/verd_obscur</item>
+        <item name="colorOnPrimary">@color/claretP</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/roig_claret</item>
+        <item name="colorSecondaryVariant">@color/roig_mig</item>
+        <item name="colorOnSecondary">@color/roig_obscur</item>
+
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
     </style>
 </resources>
