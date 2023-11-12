@@ -10,4 +10,16 @@
     <string name="creat">Usuari creat correctament</string>
     <string name="ureg">Usuari registrat</string>
     <string name="noreg">Deu crear un usuari abans de iniciar sessió, per favor registra\'t</string>
+
+    <string name="settings">Configuració</string>
+    <string name="events">Events</string>
+    <string name="equip">Equip</string>
+    <string name="gal">Galeria</string>
+    <string name="home">Inici</string>
+
+    <string name="navigation_drawer_open">Finestra de navegació oberta</string>
+    <string name="navigation_drawer_close">Finestra de navegació tancada</string>
+
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

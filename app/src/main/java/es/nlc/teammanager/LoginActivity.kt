@@ -11,8 +11,6 @@ class LoginActivity : AppCompatActivity(), DialogFragment.DialogListener, LoginF
 
     private var registrat = false
     private lateinit var binding: ActivityLoginBinding
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
