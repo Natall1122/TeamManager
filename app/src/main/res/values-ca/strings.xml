@@ -21,7 +21,12 @@
     <string name="result">1 - 1</string>
     <string name="entrene">Entrenament</string>
     <string name="partit">Partit</string>
-
+    <string name="evFragment">INFORMACIÓ EVENTS</string>
+    <string name="btnEvents">AFEGIR EVENT</string>
+    <string name="editEvents">EDITAR EVENT</string>
+    <string name="add">AFEGIR</string>
+    <string name="denegat">Permís denegat, no es pot accedir a la galeria</string>
+    <string name="donat">Permís donat, obrint galeria</string>
     <string name="navigation_drawer_open">Finestra de navegació oberta</string>
     <string name="navigation_drawer_close">Finestra de navegació tancada</string>
 

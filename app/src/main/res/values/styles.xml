@@ -3,4 +3,10 @@
     <style name="btn" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <item name="backgroundTint">@color/claretP</item>
     </style>
+    <style name="btn_add" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="backgroundTint">@color/roig_mig</item>
+    </style>
+    <style name="btn_edit" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="backgroundTint">@color/roig_claret</item>
+    </style>
 </resources>
