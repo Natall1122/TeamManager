@@ -16,6 +16,11 @@
     <string name="equip">Equip</string>
     <string name="gal">Galeria</string>
     <string name="home">Inici</string>
+    <string name="infoP">Info últim partit:</string>
+    <string name="pevents">Els pròxims 3 events: </string>
+    <string name="result">1 - 1</string>
+    <string name="entrene">Entrenament</string>
+    <string name="partit">Partit</string>
 
     <string name="navigation_drawer_open">Finestra de navegació oberta</string>
     <string name="navigation_drawer_close">Finestra de navegació tancada</string>

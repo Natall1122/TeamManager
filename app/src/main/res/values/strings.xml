@@ -17,6 +17,11 @@
     <string name="home">Home</string>
     <string name="navigation_drawer_open">Navigation Drawer Open</string>
     <string name="navigation_drawer_close">Navigation Drawer Close</string>
+    <string name="infoP">Last Match info:</string>
+    <string name="result">1 - 1</string>
+    <string name="pevents">The next 3 events: </string>
+    <string name="entrene">Training</string>
+    <string name="partit">Match</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
