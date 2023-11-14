@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import es.nlc.teammanager.databinding.FragmentLoginBinding
 
 class LoginFragment : Fragment(), View.OnClickListener {
@@ -35,7 +36,13 @@ class LoginFragment : Fragment(), View.OnClickListener {
 
     override fun onClick(v: View) {
         when(v.id){
-            R.id.btn_log -> mListener?.onButtonClicked()
+            R.id.btn_log -> {
+                if(binding.usuari.text.toString() == "Natalia" && binding.contrasenya.text.toString() == "12345"){
+                    mListener?.onButtonClicked()
+                }else{
+                    Toast.makeText(activity, "Usuari o contrasenya incorrectes", Toast.LENGTH_SHORT).show()
+                }
+            }
         }
     }
     override fun onDetach() {

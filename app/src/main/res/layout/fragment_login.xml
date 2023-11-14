@@ -5,15 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LoginFragment"
-    android:background="@color/verd_obscur">
+    android:background="@color/verd_obscur"
+    style="@style/btn">
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:cardCornerRadius="50dp"
-        android:layout_marginStart="70dp"
+        android:layout_marginStart="50dp"
         android:layout_marginTop="70dp"
-        android:layout_marginEnd="70dp"
+        android:layout_marginEnd="50dp"
         android:layout_marginBottom="70dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -48,6 +49,7 @@
                 android:layout_marginLeft="15dp">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/usuari"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="text">
@@ -67,6 +69,7 @@
                 android:layout_marginLeft="15dp">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/contrasenya"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="text"></com.google.android.material.textfield.TextInputEditText>

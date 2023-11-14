@@ -28,6 +28,11 @@
     <string name="add">ADD</string>
     <string name="denegat">Permission denied, no access to the gallery.</string>
     <string name="donat">Permission granted, opening the gallery</string>
+    <string name="nat">Natalia</string>
+    <string name="cont">12345</string>
+    <string name="rol">Trainer</string>
+    <string name="noti">Notifications</string>
+    <string name="delete">DELETE ACOUNT</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 

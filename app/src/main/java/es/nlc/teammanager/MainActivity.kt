@@ -19,7 +19,7 @@ import com.google.android.material.navigation.NavigationView
 import com.google.android.material.snackbar.Snackbar
 import es.nlc.teammanager.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener, NavigationBarView.OnItemSelectedListener, GaleriaFragment.OnButtonsFragmentListener{
+class MainActivity : AppCompatActivity(), EventsFragment.OnButtonsClickedListener, NavigationView.OnNavigationItemSelectedListener, NavigationBarView.OnItemSelectedListener, GaleriaFragment.OnButtonsFragmentListener{
 
     private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -122,5 +122,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         }else{
             super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         }
+    }
+
+    override fun onButtonClicked() {
+        Toast.makeText(this,"WE'RE WORKING ON THIS FUNCIONALITY, SORRY", Toast.LENGTH_SHORT).show()
     }
 }

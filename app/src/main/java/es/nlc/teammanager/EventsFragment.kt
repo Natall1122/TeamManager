@@ -1,5 +1,6 @@
 package es.nlc.teammanager
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -10,16 +11,18 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import es.nlc.teammanager.adapters.EventsAdapter
 import es.nlc.teammanager.clases.events
 import es.nlc.teammanager.databinding.FragmentEventsBinding
-import es.nlc.teammanager.databinding.FragmentPrincipalBinding
 
-class EventsFragment : Fragment() {
+class EventsFragment : Fragment(), View.OnClickListener {
     private lateinit var binding: FragmentEventsBinding
+    private var mListener: OnButtonsClickedListener? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentEventsBinding.inflate(inflater, container, false)
+        binding.btnAddEvent.setOnClickListener(this)
+        binding.btnEditEvent.setOnClickListener(this)
 
         setUpRecyclerView()
         return binding.root
@@ -57,8 +60,30 @@ class EventsFragment : Fragment() {
 
         binding.recView.adapter = productsAdapter
         binding.recView.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+    }
 
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
 
+        if(context is OnButtonsClickedListener){
+            mListener = context
+        }else{
+            throw Exception("The activity must implement the interface OnButtonsFragmentListener")
+        }
+    }
 
+    override fun onClick(v: View) {
+        when(v.id){
+            R.id.btn_editEvent -> mListener?.onButtonClicked()
+            R.id.btn_addEvent -> mListener?.onButtonClicked()
+            }
+    }
+    override fun onDetach() {
+        super.onDetach()
+        mListener = null
+    }
+
+    interface OnButtonsClickedListener{
+        fun onButtonClicked()
     }
 }
