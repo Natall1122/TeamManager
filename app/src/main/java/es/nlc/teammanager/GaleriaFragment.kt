@@ -53,8 +53,6 @@ class GaleriaFragment : Fragment(), View.OnClickListener {
 
     private fun setUpRecyclerView() {
         val images = mutableListOf<galeria>(
-            galeria(R.drawable.uno),
-            galeria(R.drawable.dos),
             galeria(R.drawable.tres),
             galeria(R.drawable.quatre),
             galeria(R.drawable.cinc),

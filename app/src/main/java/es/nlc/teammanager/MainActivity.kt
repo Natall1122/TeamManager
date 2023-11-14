@@ -19,7 +19,7 @@ import com.google.android.material.navigation.NavigationView
 import com.google.android.material.snackbar.Snackbar
 import es.nlc.teammanager.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity(), EventsFragment.OnButtonsClickedListener, NavigationView.OnNavigationItemSelectedListener, NavigationBarView.OnItemSelectedListener, GaleriaFragment.OnButtonsFragmentListener{
+class MainActivity : AppCompatActivity(), ConfigFragment.onDeleteListener, EventsFragment.OnButtonsClickedListener, NavigationView.OnNavigationItemSelectedListener, NavigationBarView.OnItemSelectedListener, GaleriaFragment.OnButtonsFragmentListener{
 
     private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -127,4 +127,10 @@ class MainActivity : AppCompatActivity(), EventsFragment.OnButtonsClickedListene
     override fun onButtonClicked() {
         Toast.makeText(this,"WE'RE WORKING ON THIS FUNCIONALITY, SORRY", Toast.LENGTH_SHORT).show()
     }
+
+    override fun onDeleteClicked() {
+        Toast.makeText(this, "DELETING ACOUNT...", Toast.LENGTH_SHORT).show()
+    }
+
+
 }

@@ -28,7 +28,6 @@
         android:contentDescription="@string/add"
         app:fabSize="normal"
         android:src="@drawable/add"
-        style="@style/btn"
         android:layout_gravity="bottom|end"/>
 
 </FrameLayout>

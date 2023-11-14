@@ -1,13 +1,13 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Theme.TeamManager" parent="Theme.Material3.DayNight.NoActionBar">
-        <item name="colorPrimary">@color/verd</item>
-        <item name="colorPrimaryVariant">@color/verd_obscur</item>
-        <item name="colorOnPrimary">@color/claretP</item>
+        <item name="colorPrimary">@color/roig_claret</item>
+        <item name="colorPrimaryVariant">@color/roig_mig</item>
+        <item name="colorOnPrimary">@color/roig_obscur</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/roig_claret</item>
-        <item name="colorSecondaryVariant">@color/roig_mig</item>
-        <item name="colorOnSecondary">@color/roig_obscur</item>
+        <item name="colorSecondary">@color/verd</item>
+        <item name="colorSecondaryVariant">@color/verd_obscur</item>
+        <item name="colorOnSecondary">@color/claretP</item>
 
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
     </style>

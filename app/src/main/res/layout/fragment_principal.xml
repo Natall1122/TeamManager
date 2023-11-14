@@ -10,7 +10,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/verd_obscur"
+        android:background="?attr/colorPrimaryVariant"
         android:padding="20dp">
 
         <TextView
@@ -67,7 +67,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/claretP"
+        android:background="?attr/colorOnPrimary"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="190dp"
         android:orientation="vertical"
@@ -79,11 +79,11 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="@string/pevents"
-            android:textColor="@color/verd_obscur"
+            android:textColor="?attr/colorOnSecondary"
             android:textSize="20dp"
             android:textStyle="bold"
             tools:layout_editor_absoluteX="20dp"
-            tools:layout_editor_absoluteY="20dp" />
+            tools:layout_editor_absoluteY="20dp"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recView"
