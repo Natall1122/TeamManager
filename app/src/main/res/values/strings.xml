@@ -22,8 +22,8 @@
     <string name="pevents">The next 3 events: </string>
     <string name="entrene">Training</string>
     <string name="evFragment">EVENTS INFORMATION</string>
-    <string name="btnEvents">ADD EVENT</string>
-    <string name="editEvents">EDIT EVENT</string>
+    <string name="btnEvents">ADD</string>
+    <string name="editEvents">EDIT</string>
     <string name="partit">Match</string>
     <string name="add">ADD</string>
     <string name="denegat">Permission denied, no access to the gallery.</string>

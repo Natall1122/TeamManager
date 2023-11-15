@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="btn" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <item name="backgroundTint">@color/claretP</item>
+        <item name="backgroundTint">?attr/colorOnPrimary</item>
     </style>
     <style name="btn_add" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="backgroundTint">@color/roig_mig</item>

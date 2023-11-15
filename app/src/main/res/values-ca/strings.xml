@@ -22,8 +22,8 @@
     <string name="entrene">Entrenament</string>
     <string name="partit">Partit</string>
     <string name="evFragment">INFORMACIÓ EVENTS</string>
-    <string name="btnEvents">AFEGIR EVENT</string>
-    <string name="editEvents">EDITAR EVENT</string>
+    <string name="btnEvents">AFEGIR</string>
+    <string name="editEvents">EDITAR</string>
     <string name="add">AFEGIR</string>
     <string name="denegat">Permís denegat, no es pot accedir a la galeria</string>
     <string name="donat">Permís donat, obrint galeria</string>
