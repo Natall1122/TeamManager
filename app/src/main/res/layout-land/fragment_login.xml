@@ -94,7 +94,7 @@
                 android:layout_marginTop="28dp"
                 android:layout_marginEnd="100dp"
                 android:text="@string/reg"
-                android:textColor="@color/verd_obscur"
+                android:textColor="?attr/colorOnSecondary"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/btn_log" />
 

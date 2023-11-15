@@ -7,16 +7,13 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.Button
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import androidx.core.view.GravityCompat
 import androidx.fragment.app.commit
 import androidx.fragment.app.replace
 import com.google.android.material.navigation.NavigationBarView
 import com.google.android.material.navigation.NavigationView
-import com.google.android.material.snackbar.Snackbar
 import es.nlc.teammanager.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity(), ConfigFragment.onDeleteListener, EventsFragment.OnButtonsClickedListener, NavigationView.OnNavigationItemSelectedListener, NavigationBarView.OnItemSelectedListener, GaleriaFragment.OnButtonsFragmentListener{
