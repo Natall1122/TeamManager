@@ -26,9 +26,9 @@ class PrincipalFragment : Fragment() {
 
     private fun setUpRecyclerView() {
         val products = mutableListOf<events>(
-            events("Entrenament", "14/11" , "20:30", "22:00", 15, 2, 3),
-            events("Entrenament", "16/11" , "20:30", "22:00", 17, 2, 1 ),
-            events("Partit", "19/11" , "17:30", "19:15", 16, 3, 1 )
+            events(getString(R.string.entrene), "14/11" , "20:30", "22:00", 15, 2, 3),
+            events(getString(R.string.entrene), "16/11" , "20:30", "22:00", 17, 2, 1 ),
+            events(getString(R.string.partit), "19/11" , "17:30", "19:15", 16, 3, 1 )
         )
 
 

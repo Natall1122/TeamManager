@@ -40,7 +40,7 @@ class LoginFragment : Fragment(), View.OnClickListener {
                 if(binding.usuari.text.toString() == "Natalia" && binding.contrasenya.text.toString() == "12345"){
                     mListener?.onButtonClicked()
                 }else{
-                    Toast.makeText(activity, "The User or password are wrong, try again", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(activity, getString(R.string.wuser), Toast.LENGTH_SHORT).show()
                 }
             }
         }

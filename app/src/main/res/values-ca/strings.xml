@@ -35,5 +35,14 @@
     <string name="noti">Notificacions</string>
     <string name="delete">BORRAR COMPTER</string>
     <string name="dark_mode">Mode obscur</string>
+    <string name="mc">MC</string>
+    <string name="dc">DC</string>
+    <string name="gk">POR</string>
+    <string name="dfc">DFC</string>
+    <string name="lb">LB</string>
+    <string name="logOut">LOG OUT</string>
+    <string name="working">ESTEM TREBALLANT EN ESTA FUNCIONALITAT, HO SENTIM</string>
+    <string name="del">BORRANT COMPTER....</string>
+    <string name="wuser">El usuari o la contrasenya son erronis, proba una altra vegada</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

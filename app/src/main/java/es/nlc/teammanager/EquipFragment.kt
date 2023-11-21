@@ -28,16 +28,16 @@ class EquipFragment : Fragment() {
 
     private fun setUpRecyclerView() {
         val jugadors = mutableListOf<Equip>(
-            Equip("Alexia", "mig centre", R.drawable.alexia),
-            Equip("Aitana", "mig centre", R.drawable.aitana),
-            Equip("Patri", "mig centre", R.drawable.patri),
-            Equip("Mapi", "central", R.drawable.mapi),
-            Equip("Claudia", "delantera", R.drawable.claudia),
-            Equip("Hansen", "delantera", R.drawable.hansen),
-            Equip("Sabrina", "portera", R.drawable.sabrina),
-            Equip("Taylor", "central", R.drawable.taylor),
-            Equip("Enid", "Lateral", R.drawable.enid),
-            Equip("Wednesday", "Lateral", R.drawable.wednesday)
+            Equip("Alexia", getString(R.string.mc), R.drawable.alexia),
+            Equip("Aitana", getString(R.string.mc), R.drawable.aitana),
+            Equip("Patri", getString(R.string.mc), R.drawable.patri),
+            Equip("Mapi", getString(R.string.dfc), R.drawable.mapi),
+            Equip("Claudia", getString(R.string.dc), R.drawable.claudia),
+            Equip("Hansen", getString(R.string.dc), R.drawable.hansen),
+            Equip("Sabrina", getString(R.string.gk), R.drawable.sabrina),
+            Equip("Taylor", getString(R.string.dfc), R.drawable.taylor),
+            Equip("Enid", getString(R.string.lb), R.drawable.enid),
+            Equip("Wednesday", getString(R.string.lb), R.drawable.wednesday)
         )
 
 
