@@ -16,7 +16,7 @@ import com.google.android.material.navigation.NavigationBarView
 import com.google.android.material.navigation.NavigationView
 import es.nlc.teammanager.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity(), ConfigFragment.onDeleteListener, EventsFragment.OnButtonsClickedListener, NavigationView.OnNavigationItemSelectedListener, NavigationBarView.OnItemSelectedListener, GaleriaFragment.OnButtonsFragmentListener{
+class MainActivity : AppCompatActivity(), ConfigFragment.onButtonsListener, EventsFragment.OnButtonsClickedListener, NavigationView.OnNavigationItemSelectedListener, NavigationBarView.OnItemSelectedListener, GaleriaFragment.OnButtonsFragmentListener{
 
     private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -127,6 +127,11 @@ class MainActivity : AppCompatActivity(), ConfigFragment.onDeleteListener, Event
 
     override fun onDeleteClicked() {
         Toast.makeText(this, getString(R.string.del), Toast.LENGTH_SHORT).show()
+    }
+
+    override fun onBackClicked(){
+        val main = Intent(this, LoginActivity::class.java)
+        startActivity(main)
     }
 
 

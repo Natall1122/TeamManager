@@ -6,13 +6,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Switch
 import es.nlc.teammanager.databinding.FragmentConfigBinding
-import es.nlc.teammanager.databinding.FragmentEventsBinding
+
 
 class ConfigFragment : Fragment(), View.OnClickListener {
     private lateinit var binding: FragmentConfigBinding
-    private var mListener: onDeleteListener? = null
+    private var mListener: onButtonsListener? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -20,12 +19,13 @@ class ConfigFragment : Fragment(), View.OnClickListener {
     ): View? {
         binding = FragmentConfigBinding.inflate(inflater, container, false)
         binding.delete.setOnClickListener(this)
+        binding.back.setOnClickListener(this)
         return binding.root
     }
     override fun onAttach(context: Context) {
         super.onAttach(context)
 
-        if(context is onDeleteListener){
+        if(context is onButtonsListener){
             mListener = context
         }else{
             throw Exception("The activity must implement the interface OnButtonsFragmentListener")
@@ -34,6 +34,7 @@ class ConfigFragment : Fragment(), View.OnClickListener {
     override fun onClick(v: View) {
         when(v.id){
             R.id.delete -> mListener?.onDeleteClicked()
+            R.id.back -> mListener?.onBackClicked()
         }
     }
     override fun onDetach() {
@@ -41,7 +42,8 @@ class ConfigFragment : Fragment(), View.OnClickListener {
         mListener = null
     }
 
-    interface onDeleteListener{
+    interface onButtonsListener{
         fun onDeleteClicked()
+        fun onBackClicked()
     }
 }
