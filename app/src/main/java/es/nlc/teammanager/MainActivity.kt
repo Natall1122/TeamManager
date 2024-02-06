@@ -15,6 +15,11 @@ import androidx.fragment.app.replace
 import com.google.android.material.navigation.NavigationBarView
 import com.google.android.material.navigation.NavigationView
 import es.nlc.teammanager.databinding.ActivityMainBinding
+import es.nlc.teammanager.fragments.ConfigFragment
+import es.nlc.teammanager.fragments.EquipFragment
+import es.nlc.teammanager.fragments.EventsFragment
+import es.nlc.teammanager.fragments.GaleriaFragment
+import es.nlc.teammanager.fragments.PrincipalFragment
 
 class MainActivity : AppCompatActivity(), ConfigFragment.onButtonsListener, EventsFragment.OnButtonsClickedListener, NavigationView.OnNavigationItemSelectedListener, NavigationBarView.OnItemSelectedListener, GaleriaFragment.OnButtonsFragmentListener{
 

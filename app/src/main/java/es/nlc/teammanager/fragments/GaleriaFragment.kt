@@ -1,4 +1,4 @@
-package es.nlc.teammanager
+package es.nlc.teammanager.fragments
 
 
 import android.content.Context
@@ -10,13 +10,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
+import es.nlc.teammanager.R
 import es.nlc.teammanager.adapters.GaleriaAdapter
 import es.nlc.teammanager.clases.galeria
 import es.nlc.teammanager.databinding.FragmentGaleriaBinding
 
 class GaleriaFragment : Fragment(), View.OnClickListener {
     private lateinit var binding: FragmentGaleriaBinding
-    private var mListener: GaleriaFragment.OnButtonsFragmentListener? = null
+    private var mListener: OnButtonsFragmentListener? = null
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -30,7 +31,7 @@ class GaleriaFragment : Fragment(), View.OnClickListener {
     override fun onAttach(context: Context) {
         super.onAttach(context)
 
-        if(context is GaleriaFragment.OnButtonsFragmentListener){
+        if(context is OnButtonsFragmentListener){
             mListener = context
         }else{
             throw Exception("The activity must implement the interface OnButtonsFragmentListener")

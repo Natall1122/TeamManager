@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "489144178395",
+    "project_id": "teammanager-7302b",
+    "storage_bucket": "teammanager-7302b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:489144178395:android:3bc9cc2043211fa8a7defe",
+        "android_client_info": {
+          "package_name": "es.nlc.teammanager"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "489144178395-gnu3iq7g1rok3bfmp4gks724mseif0cp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLdmHY9tL1_8y4DyLpnq-6mymGFDqW7S4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "489144178395-gnu3iq7g1rok3bfmp4gks724mseif0cp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

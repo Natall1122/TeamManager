@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginFragment"
+    tools:context=".fragments.LoginFragment"
     android:background="?attr/colorPrimaryVariant"
     style="@style/btn">
 
@@ -97,6 +97,17 @@
                 app:layout_constraintTop_toBottomOf="@+id/btn_log"
                 android:textColor="?attr/colorOnSecondary"
                 style="@style/btn"/>
+
+            <TextView
+                android:id="@+id/Fpass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="@string/remPass"
+                android:textColor="?attr/colorSecondary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_reg" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

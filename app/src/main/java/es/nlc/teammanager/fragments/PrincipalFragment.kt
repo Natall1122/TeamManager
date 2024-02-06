@@ -1,4 +1,4 @@
-package es.nlc.teammanager
+package es.nlc.teammanager.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

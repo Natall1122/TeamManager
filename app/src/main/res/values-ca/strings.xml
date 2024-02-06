@@ -6,10 +6,23 @@
     <string name="contraseña">Contraseya: </string>
     <string name="log">ENTRAR</string>
     <string name="reg">REGISTRAR-SE</string>
-    <string name="vale">Este serà el teu usuari, vale?</string>
-    <string name="creat">Usuari creat correctament</string>
-    <string name="ureg">Usuari registrat</string>
-    <string name="noreg">Deu crear un usuari abans de iniciar sessió, per favor registra\'t</string>
+
+    <string name="remPass">No recorde la meua contrasenya</string>
+    <string name="implement">L\'activitat ha d\'implementar la interfície OnButtonsFragmentListener</string>
+    <string name="wrong">Usuari o contrasenya incorrectes</string>
+    <string name="noUser">Has d\'escriure l\'usuari i la contrasenya</string>
+    <string name="logged">Usuari  loggejat correctament</string>
+    <string name="Registration">Registrat!</string>
+    <string name="thanks">Gràcies per registrar-te!!! :)</string>
+    <string name="regCorrect">Usuari registrat correctament</string>
+    <string name="errorReg">Error al registrar l\'usuari</string>
+    <string name="send">S\'ha enviat un correu amb un link per a resetejar la contrasenya</string>
+    <string name="enviar">Enviar</string>
+    <string name="paragraf">Escriu el email al qual vols enviar el correu per a resetejar la contrasenya</string>
+    <string name="rem">Recordar contrasenya</string>
+    <string name="error">Error al enviar el correu</string>
+    <string name="wmail">Has d\'escriure el correu electrònic</string>
+
 
     <string name="settings">Configuració</string>
     <string name="events">Events</string>

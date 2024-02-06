@@ -5,10 +5,23 @@
     <string name="contraseña">Password: </string>
     <string name="log">ENTER</string>
     <string name="reg">SIGN UP</string>
-    <string name="vale">This will be your user, ok?</string>
-    <string name="creat">User created correctly</string>
-    <string name="ureg">User registered</string>
-    <string name="noreg">You must create a user before you can log in, please register.</string>
+
+    <string name="remPass">I don\'t remember my password</string>
+    <string name="implement">The activity must implement the interface OnButtonsFragmentListener</string>
+    <string name="wrong">Wrong user o password</string>
+    <string name="noUser">You must write a user and a password</string>
+    <string name="logged">User logged in correctly</string>
+    <string name="Registration">Sign Up!</string>
+    <string name="thanks">Thank you for Signing Up!!! :)</string>
+    <string name="regCorrect">User signed up correctly</string>
+    <string name="errorReg">There was an error when registering the user</string>
+    <string name="send">An email has been send for you to reset your password</string>
+    <string name="enviar">Send</string>
+    <string name="paragraf">Write the email address to which you want to send the email to reset the password.</string>
+    <string name="rem">Remember password</string>
+    <string name="error">Error sending mail</string>
+    <string name="wmail">You have to write an email</string>
+
 
     <string name="settings">Settings</string>
     <string name="events">Events</string>

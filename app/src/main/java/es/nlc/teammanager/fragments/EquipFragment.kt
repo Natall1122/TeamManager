@@ -1,4 +1,4 @@
-package es.nlc.teammanager
+package es.nlc.teammanager.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,10 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
+import es.nlc.teammanager.R
 import es.nlc.teammanager.adapters.EquipAdapter
-import es.nlc.teammanager.adapters.EventsAdapter
 import es.nlc.teammanager.clases.Equip
-import es.nlc.teammanager.clases.events
 import es.nlc.teammanager.databinding.FragmentEquipBinding
 
 class EquipFragment : Fragment() {

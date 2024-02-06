@@ -8,7 +8,7 @@
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragment_container"
-        android:name="es.nlc.teammanager.LoginFragment"
+        android:name="es.nlc.teammanager.fragments.LoginFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"></androidx.fragment.app.FragmentContainerView>
 
