@@ -17,18 +17,18 @@ import es.nlc.teammanager.fragments.RememberFragment
 class LoginActivity : AppCompatActivity(), RememberFragment.OnRegistrationListener, RegistrationFragment.OnRegistrationListener, LoginFragment.OnButtonsFragmentListener{
 
     private lateinit var binding: ActivityLoginBinding
-    private val authManager = AuthManager()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityLoginBinding.inflate(layoutInflater)
+        setContentView(binding.root)
     }
 
     override fun onLoginButtonClicked() {
         Toast.makeText(this, R.string.logged, Toast.LENGTH_SHORT).show()
-        Intent(this, MainActivity::class.java).apply {
+        startActivity(Intent(this, MainActivity::class.java).apply {
             putExtra("GRANTED", true)
-        }
+        })
     }
 
     override fun onSignUpButtonClicked() {

@@ -48,16 +48,22 @@ class RegistrationFragment : Fragment(), View.OnClickListener {
             R.id.btnReg -> {
                 val email = binding.user.text.toString()
                 val pass = binding.cont.text.toString()
+                val pass2 = binding.cont2.text.toString()
                 if (!email.isNullOrBlank() && !pass.isNullOrBlank()) {
-                    lifecycleScope.launch(Dispatchers.IO) {
-                        val userSignedUp = authManager.signUp(email, pass)
-                        withContext(Dispatchers.Main) {
-                            if (userSignedUp != null) {
-                                mListener?.onRegistreClicked()
-                            } else {
-                                Toast.makeText(activity, R.string.errorReg, Toast.LENGTH_SHORT).show()
+                    if(pass == pass2) {
+                        lifecycleScope.launch(Dispatchers.IO) {
+                            val userSignedUp = authManager.signUp(email, pass)
+                            withContext(Dispatchers.Main) {
+                                if (userSignedUp != null) {
+                                    mListener?.onRegistreClicked()
+                                } else {
+                                    Toast.makeText(activity, R.string.errorReg, Toast.LENGTH_SHORT)
+                                        .show()
+                                }
                             }
                         }
+                    }else{
+                        Toast.makeText(activity, R.string.ErrorPass, Toast.LENGTH_SHORT).show()
                     }
                 } else {
                     Toast.makeText(activity, R.string.noUser, Toast.LENGTH_SHORT).show()

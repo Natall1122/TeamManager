@@ -2,7 +2,8 @@
     <string name="app_name">TeamManager</string>
     <string name="inici">Login</string>
     <string name="nom">User name: </string>
-    <string name="contraseña">Password: </string>
+    <string name="contrasenya">Password: </string>
+    <string name="contrasenya2">Rewrite your password</string>
     <string name="log">ENTER</string>
     <string name="reg">SIGN UP</string>
 
@@ -14,6 +15,7 @@
     <string name="Registration">Sign Up!</string>
     <string name="thanks">Thank you for Signing Up!!! :)</string>
     <string name="regCorrect">User signed up correctly</string>
+    <string name="ErrorPass">The passwords are not teh same</string>
     <string name="errorReg">There was an error when registering the user</string>
     <string name="send">An email has been send for you to reset your password</string>
     <string name="enviar">Send</string>

@@ -3,7 +3,8 @@
     <string name="app_name">TeamManager</string>
     <string name="inici">Iniciar Sessió</string>
     <string name="nom">Nom d\'usuari: </string>
-    <string name="contraseña">Contraseya: </string>
+    <string name="contrasenya">Contraseya: </string>
+    <string name="contrasenya2">Reescriu la contrasenya</string>
     <string name="log">ENTRAR</string>
     <string name="reg">REGISTRAR-SE</string>
 
@@ -15,6 +16,7 @@
     <string name="Registration">Registrat!</string>
     <string name="thanks">Gràcies per registrar-te!!! :)</string>
     <string name="regCorrect">Usuari registrat correctament</string>
+    <string name="ErrorPass">Les contasenyes no son iguals</string>
     <string name="errorReg">Error al registrar l\'usuari</string>
     <string name="send">S\'ha enviat un correu amb un link per a resetejar la contrasenya</string>
     <string name="enviar">Enviar</string>
