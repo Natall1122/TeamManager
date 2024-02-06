@@ -46,7 +46,16 @@
     <string name="rol">Trainer</string>
     <string name="noti">Notifications</string>
     <string name="delete">DELETE ACOUNT</string>
+    <string name="logOut">LOG OUT</string>
     <string name="dark_mode">Dark mode</string>
+    <string name="mc">CM</string>
+    <string name="dc">ST</string>
+    <string name="gk">GK</string>
+    <string name="dfc">DFC</string>
+    <string name="lb">LB</string>
+    <string name="working">WE\'RE WORKING ON THIS FUNCIONALITY, SORRY</string>
+    <string name="wuser">The User or password are wrong, try again</string>
+    <string name="del">DELETING ACOUNT....</string>
     <string name="back">CLOSE SESSION</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

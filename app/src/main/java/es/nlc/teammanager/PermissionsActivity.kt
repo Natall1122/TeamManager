@@ -14,10 +14,10 @@ class PermissionsActivity : AppCompatActivity() {
         val granted = extras?.getBoolean("GRANTED")?:false
 
         if(granted){
-            Toast.makeText(this, "Permission granted, opening the gallery", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, getString(R.string.donat), Toast.LENGTH_SHORT).show()
             startActivity(Intent(this, MainActivity::class.java))
         }else{
-            Toast.makeText(this, "Permission denied, no access to the gallery.", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, getString(R.string.denegat), Toast.LENGTH_SHORT).show()
             startActivity(Intent(this, MainActivity::class.java))
         }
     }

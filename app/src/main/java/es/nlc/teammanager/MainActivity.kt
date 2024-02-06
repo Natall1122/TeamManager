@@ -127,11 +127,11 @@ class MainActivity : AppCompatActivity(), ConfigFragment.onButtonsListener, Even
     }
 
     override fun onButtonClicked() {
-        Toast.makeText(this,"WE'RE WORKING ON THIS FUNCIONALITY, SORRY", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this,getString(R.string.working), Toast.LENGTH_SHORT).show()
     }
 
     override fun onDeleteClicked() {
-        Toast.makeText(this, "DELETING ACOUNT...", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, getString(R.string.del), Toast.LENGTH_SHORT).show()
     }
 
     override fun onBackClicked(){
