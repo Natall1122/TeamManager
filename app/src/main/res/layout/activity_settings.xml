@@ -6,4 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".SettingsActivity">
 
+    <androidx.fragment.app.FragmentContainerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:name="es.nlc.teammanager.fragments.SettingsFragment"
+        android:id="@+id/fragment_container">
+    </androidx.fragment.app.FragmentContainerView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

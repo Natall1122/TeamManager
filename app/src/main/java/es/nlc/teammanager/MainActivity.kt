@@ -21,7 +21,7 @@ import es.nlc.teammanager.fragments.EventsFragment
 import es.nlc.teammanager.fragments.GaleriaFragment
 import es.nlc.teammanager.fragments.PrincipalFragment
 
-class MainActivity : AppCompatActivity(), ConfigFragment.onButtonsListener, EventsFragment.OnButtonsClickedListener, NavigationView.OnNavigationItemSelectedListener, NavigationBarView.OnItemSelectedListener, GaleriaFragment.OnButtonsFragmentListener{
+class MainActivity : AppCompatActivity(), EventsFragment.OnButtonsClickedListener, NavigationView.OnNavigationItemSelectedListener, NavigationBarView.OnItemSelectedListener, GaleriaFragment.OnButtonsFragmentListener{
 
     private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,16 +37,14 @@ class MainActivity : AppCompatActivity(), ConfigFragment.onButtonsListener, Even
         return true;
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean{
-        return when(item.itemId){
-            R.id.action_settings ->{ supportFragmentManager.commit {
-                setReorderingAllowed(true)
-                replace<ConfigFragment>(R.id.fragment_container)
-                addToBackStack(null)
-            }
-                true
-            }
-            else -> false
+    override fun onOptionsItemSelected(item: MenuItem): Boolean = when(item.itemId){
+        R.id.action_settings ->{
+            startActivity(
+                Intent(this, SettingsActivity::class.java).apply {  }
+            )
+            true
+        }else -> {
+            false
         }
     }
 
@@ -128,15 +126,6 @@ class MainActivity : AppCompatActivity(), ConfigFragment.onButtonsListener, Even
 
     override fun onButtonClicked() {
         Toast.makeText(this,getString(R.string.working), Toast.LENGTH_SHORT).show()
-    }
-
-    override fun onDeleteClicked() {
-        Toast.makeText(this, getString(R.string.del), Toast.LENGTH_SHORT).show()
-    }
-
-    override fun onBackClicked(){
-        val main = Intent(this, LoginActivity::class.java)
-        startActivity(main)
     }
 
 

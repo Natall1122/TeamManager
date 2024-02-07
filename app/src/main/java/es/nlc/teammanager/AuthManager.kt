@@ -1,5 +1,7 @@
 package es.nlc.teammanager
 
+import android.content.ContentValues.TAG
+import android.util.Log
 import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -37,8 +39,20 @@ class AuthManager {
         auth.signOut()
     }
 
+    // https://firebase.google.com/docs/auth/android/manage-users?hl=es-419
+    fun deleteUser(): Boolean{
+        val user = auth.currentUser!!
+
+        user.delete()
+            .addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    Log.d(TAG, R.string.del.toString())
+                }
+            }
+        return true
+    }
+
     fun getCurrentUser(): FirebaseUser?{
         return auth.currentUser
-
     }
 }
