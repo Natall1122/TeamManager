@@ -8,7 +8,7 @@
             app:useSimpleSummaryProvider="true" />
 
         <ListPreference
-            app:defaultValue="black"
+            app:defaultValue="#D8E9A8"
             app:entries="@array/colors_entries"
             app:entryValues="@array/colors_values"
             app:title="@string/chatC"
