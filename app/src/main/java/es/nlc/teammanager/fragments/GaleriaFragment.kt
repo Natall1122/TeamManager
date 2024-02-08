@@ -12,6 +12,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.MediaController
 import android.widget.Toast
+import androidx.appcompat.content.res.AppCompatResources.getDrawable
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.GridLayoutManager
 import es.nlc.teammanager.R
 import es.nlc.teammanager.adapters.GaleriaAdapter
@@ -22,8 +24,10 @@ class GaleriaFragment : Fragment(), View.OnClickListener {
     private lateinit var binding: FragmentGaleriaBinding
     private var mListener: OnButtonsFragmentListener? = null
     private val packageName = "es.nlc.teammanager"
-    private lateinit var audio: MediaPlayer
+    private var audio: MediaPlayer? = null
+
     override fun onCreateView(
+
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
@@ -35,6 +39,38 @@ class GaleriaFragment : Fragment(), View.OnClickListener {
             prepareVideo()
             binding.video.start()
         }
+
+        var isPlaying = false
+
+
+        binding.audioImage.setOnClickListener {
+            if (audio == null) {
+                audio = MediaPlayer.create(context, R.raw.imne)
+                audio?.start()
+                binding.audioImage.setImageResource(R.drawable.pause)
+                isPlaying = true
+            } else {
+                if (isPlaying) {
+                    audio?.pause()
+                    binding.audioImage.setImageResource(R.drawable.play)
+                    isPlaying = false
+                } else {
+                    audio?.start()
+                    binding.audioImage.setImageResource(R.drawable.pause)
+                    isPlaying = true
+                }
+            }
+        }
+
+        binding.audioImage.setOnLongClickListener {
+            audio?.stop()
+            audio?.release()
+            audio = null
+            binding.audioImage.setImageResource(R.drawable.play)
+            isPlaying = false
+            true
+        }
+
 
         return binding.root
     }

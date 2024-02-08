@@ -36,7 +36,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="55dp"
         android:text="@string/photos"
         android:textSize="18dp"
         android:textStyle="bold"
@@ -68,9 +68,9 @@
     </VideoView>
 
     <ImageView
-        android:id="@+id/audio"
-        android:layout_width="137dp"
-        android:layout_height="73dp"
+        android:id="@+id/audioImage"
+        android:layout_width="150dp"
+        android:layout_height="95dp"
         android:layout_marginStart="33dp"
         android:layout_marginTop="24dp"
         android:src="@drawable/play"
