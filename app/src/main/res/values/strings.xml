@@ -43,10 +43,6 @@
     <string name="add">ADD</string>
     <string name="denegat">Permission denied, no access to the gallery.</string>
     <string name="donat">Permission granted, opening the gallery</string>
-    <string name="nat">Natalia</string>
-    <string name="cont">12345</string>
-    <string name="rol">Trainer</string>
-    <string name="noti">Notifications</string>
     <string name="delete">DELETE ACOUNT</string>
     <string name="logOut">Logging out...</string>
     <string name="dark_mode">Dark mode</string>
@@ -59,19 +55,23 @@
     <string name="wuser">The User or password are wrong, try again</string>
     <string name="del">DELETING ACOUNT....</string>
     <string name="back">CLOSE SESSION</string>
-    <!-- Preference Titles -->
-    <string name="messages_header">Messages</string>
-    <string name="sync_header">Sync</string>
 
-    <!-- Messages Preferences -->
-    <string name="signature_title">Your signature</string>
-    <string name="reply_title">Default reply action</string>
 
-    <!-- Sync Preferences -->
-    <string name="sync_title">Sync email periodically</string>
-    <string name="attachment_title">Download incoming attachments</string>
-    <string name="attachment_summary_on">Automatically download attachments for incoming emails
-    </string>
-    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="chat">Chat config</string>
+    <string name="chatUs">Chat username</string>
+    <string name="chatC">Chat color</string>
+    <string name="black">Black</string>
+    <string name="green">Green</string>
 
+
+    <string name="cache">Cache config</string>
+    <string name="offLi">Offline mode</string>
+
+
+    <string name="general">General config</string>
+    <string name="vib">Vibrate</string>
+
+
+    <string name="photos">Photos</string>
+    <string name="va">Videos and Audios</string>
 </resources>

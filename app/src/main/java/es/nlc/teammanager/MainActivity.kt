@@ -15,7 +15,6 @@ import androidx.fragment.app.replace
 import com.google.android.material.navigation.NavigationBarView
 import com.google.android.material.navigation.NavigationView
 import es.nlc.teammanager.databinding.ActivityMainBinding
-import es.nlc.teammanager.fragments.ConfigFragment
 import es.nlc.teammanager.fragments.EquipFragment
 import es.nlc.teammanager.fragments.EventsFragment
 import es.nlc.teammanager.fragments.GaleriaFragment
@@ -24,6 +23,7 @@ import es.nlc.teammanager.fragments.PrincipalFragment
 class MainActivity : AppCompatActivity(), EventsFragment.OnButtonsClickedListener, NavigationView.OnNavigationItemSelectedListener, NavigationBarView.OnItemSelectedListener, GaleriaFragment.OnButtonsFragmentListener{
 
     private lateinit var binding: ActivityMainBinding
+    private val authManager = AuthManager()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -43,9 +43,26 @@ class MainActivity : AppCompatActivity(), EventsFragment.OnButtonsClickedListene
                 Intent(this, SettingsActivity::class.java).apply {  }
             )
             true
+        }
+        R.id.action_close ->{
+            authManager.logOut()
+            Toast.makeText(this, R.string.logOut, Toast.LENGTH_SHORT).show()
+            startActivity(
+                Intent(this, LoginActivity::class.java).apply { }
+            )
+            true
+        }
+        R.id.action_delete ->{
+            Toast.makeText(this, getString(R.string.del), Toast.LENGTH_SHORT).show()
+            authManager.deleteUser()
+            startActivity(
+                Intent(this, LoginActivity::class.java).apply { }
+            )
+            true
         }else -> {
             false
         }
+
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
