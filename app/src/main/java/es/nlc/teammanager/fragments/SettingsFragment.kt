@@ -17,6 +17,16 @@ class SettingsFragment : PreferenceFragmentCompat() {
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.root_preferences, rootKey)
 
+        GlobalScope.launch {
+            var username = authManager.getUsername()
+            if (username.isNullOrBlank()) {
+                username = authManager.getCurrentUser()?.email
+            }
+            withContext(Dispatchers.Main) {
+                usernamePreference.text = username
+            }
+        }
+
         usernamePreference = findPreference("usernameChat")!!
         usernamePreference.setOnPreferenceChangeListener { preference, newValue ->
             val newUsername = newValue as String
@@ -24,16 +34,6 @@ class SettingsFragment : PreferenceFragmentCompat() {
                 authManager.setUsername(newUsername)
             }
             true
-        }
-
-        // Carrega el nom d'usuari des del Firestore i actualitza la preferència d'EditText
-        GlobalScope.launch {
-            val username = authManager.getUsername()
-            withContext(Dispatchers.Main) {
-                username?.let {
-                    usernamePreference.text = it
-                }
-            }
         }
     }
 }
