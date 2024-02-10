@@ -19,6 +19,7 @@ import es.nlc.teammanager.fragments.EquipFragment
 import es.nlc.teammanager.fragments.EventsFragment
 import es.nlc.teammanager.fragments.GaleriaFragment
 import es.nlc.teammanager.fragments.PrincipalFragment
+import es.nlc.teammanager.fragments.RetrofitFragment
 
 class MainActivity : AppCompatActivity(), EventsFragment.OnButtonsClickedListener, NavigationView.OnNavigationItemSelectedListener, NavigationBarView.OnItemSelectedListener, GaleriaFragment.OnButtonsFragmentListener{
 
@@ -96,7 +97,14 @@ class MainActivity : AppCompatActivity(), EventsFragment.OnButtonsClickedListene
                 addToBackStack(null)
             }
                 true
-            }else -> false
+            }R.id.item_acuditsa ->{ supportFragmentManager.commit {
+                setReorderingAllowed(true)
+                replace<RetrofitFragment>(R.id.fragment_container)
+                addToBackStack(null)
+            }
+                true
+            }
+            else -> false
         }
     }
 

@@ -20,6 +20,12 @@
         android:enabled="true"
         android:icon="@drawable/galeria"
         android:title="@string/gal"/>
+
+    <item
+        android:id="@+id/item_acuditsa"
+        android:enabled="true"
+        android:icon="@drawable/joke"
+        android:title="@string/chiste"/>
 </menu>
 
 
