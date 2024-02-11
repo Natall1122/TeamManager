@@ -6,6 +6,6 @@ import retrofit2.http.GET
 
 interface CatsInterface {
     @GET("search")
-    suspend fun getCats(): Response<Cats>
+    suspend fun getCats(): Response<List<Cats>>
 
 }

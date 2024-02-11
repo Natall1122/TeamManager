@@ -6,11 +6,6 @@
         android:icon="@drawable/home"
         android:title="@string/home"/>
     <item
-        android:id="@+id/item_event"
-        android:enabled="true"
-        android:icon="@drawable/event"
-        android:title="@string/events"/>
-    <item
         android:id="@+id/item_equip"
         android:enabled="true"
         android:icon="@drawable/equip"
@@ -22,10 +17,16 @@
         android:title="@string/gal"/>
 
     <item
-        android:id="@+id/item_acuditsa"
+        android:id="@+id/item_gats"
         android:enabled="true"
-        android:icon="@drawable/joke"
-        android:title="@string/chiste"/>
+        android:icon="@drawable/kitten"
+        android:title="@string/gats"/>
+
+    <item
+        android:id="@+id/item_chat"
+        android:enabled="true"
+        android:icon="@drawable/chat"
+        android:title="@string/chat"/>
 </menu>
 
 

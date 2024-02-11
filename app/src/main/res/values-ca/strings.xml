@@ -76,5 +76,6 @@
     <string name="va">Videos i Audios</string>
 
 
-    <string name="chiste">Acudits</string>
+    <string name="gats">Gats</string>
+    <string name="chats">Converses</string>
 </resources>

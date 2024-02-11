@@ -51,7 +51,14 @@ class AuthManager {
     fun getCurrentUser(): FirebaseUser?{
         return auth.currentUser
     }
-
+    fun getEmail(): String? {
+        return try {
+            val user = auth.getCurrentUser()
+            user?.email
+        } catch (e: Exception) {
+            null
+        }
+    }
     suspend fun setUsername(username: String): Boolean {
         val user = auth.currentUser
         user?.let { currentUser ->

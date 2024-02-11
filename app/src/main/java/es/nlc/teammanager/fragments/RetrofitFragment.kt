@@ -9,6 +9,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import es.nlc.teammanager.CatsInterface
 import es.nlc.teammanager.adapters.CatsAdapter
+import es.nlc.teammanager.clases.Cats
 import es.nlc.teammanager.databinding.FragmentRetrofitBinding
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -18,6 +19,7 @@ class RetrofitFragment : Fragment() {
     private lateinit var binding: FragmentRetrofitBinding
     val cats = mutableListOf<String>()
     val productsAdapter = CatsAdapter( context, cats)
+    val llistaTemporal = mutableListOf<String>()
 
 
     override fun onCreateView(
@@ -31,9 +33,13 @@ class RetrofitFragment : Fragment() {
                 val call = RetrofitObject.getInstance()
                     .create(CatsInterface::class.java).getCats()
                 val response = call.body()
+                response?.forEach { element ->
+                    llistaTemporal.add(element.url)
+                }
+
                 withContext(Dispatchers.Main){
                     withContext(Dispatchers.Main){
-                        updateCats(response!!.url)
+                        updateCats(llistaTemporal)
                     }
                 }
             }
@@ -48,9 +54,9 @@ class RetrofitFragment : Fragment() {
         binding.recView.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
     }
 
-    private fun updateCats(imatges: List<String>){
+    private fun updateCats(gats: List<String>){
         cats.clear()
-        cats.addAll(imatges)
+        cats.addAll(gats)
         binding.recView.adapter?.notifyDataSetChanged()
     }
 

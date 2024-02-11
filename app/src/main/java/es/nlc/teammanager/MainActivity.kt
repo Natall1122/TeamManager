@@ -15,6 +15,7 @@ import androidx.fragment.app.replace
 import com.google.android.material.navigation.NavigationBarView
 import com.google.android.material.navigation.NavigationView
 import es.nlc.teammanager.databinding.ActivityMainBinding
+import es.nlc.teammanager.fragments.ChatFragment
 import es.nlc.teammanager.fragments.EquipFragment
 import es.nlc.teammanager.fragments.EventsFragment
 import es.nlc.teammanager.fragments.GaleriaFragment
@@ -68,14 +69,6 @@ class MainActivity : AppCompatActivity(), EventsFragment.OnButtonsClickedListene
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         return when(item.itemId){
-            R.id.item_event -> {
-                supportFragmentManager.commit {
-                    setReorderingAllowed(true)
-                    replace<EventsFragment>(R.id.fragment_container)
-                    addToBackStack(null)
-                }
-                true
-            }
             R.id.item_home -> {
                 supportFragmentManager.commit {
                     setReorderingAllowed(true)
@@ -97,9 +90,15 @@ class MainActivity : AppCompatActivity(), EventsFragment.OnButtonsClickedListene
                 addToBackStack(null)
             }
                 true
-            }R.id.item_acuditsa ->{ supportFragmentManager.commit {
+            }R.id.item_gats ->{ supportFragmentManager.commit {
                 setReorderingAllowed(true)
                 replace<RetrofitFragment>(R.id.fragment_container)
+                addToBackStack(null)
+            }
+                true
+            }R.id.item_chat ->{ supportFragmentManager.commit {
+                setReorderingAllowed(true)
+                replace<ChatFragment>(R.id.fragment_container)
                 addToBackStack(null)
             }
                 true
