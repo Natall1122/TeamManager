@@ -26,18 +26,20 @@ class RetrofitFragment : Fragment() {
     ): View? {
         binding = FragmentRetrofitBinding.inflate(inflater, container, false)
 
-
-        lifecycleScope.launch(Dispatchers.IO){
-            val call = RetrofitObject.getInstance()
-                .create(CatsInterface::class.java).getCats()
-            val response = call.body()
-            withContext(Dispatchers.Main){
+        binding.buscar.setOnClickListener {
+            lifecycleScope.launch(Dispatchers.IO){
+                val call = RetrofitObject.getInstance()
+                    .create(CatsInterface::class.java).getCats()
+                val response = call.body()
                 withContext(Dispatchers.Main){
-                    updateCats(response!!.url)
+                    withContext(Dispatchers.Main){
+                        updateCats(response!!.url)
+                    }
                 }
             }
+            setReciclerView()
         }
-        setReciclerView()
+
         return binding.root
     }
 
