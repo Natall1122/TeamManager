@@ -3,9 +3,13 @@ package es.nlc.teammanager.fragments
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.app.PendingIntent
+import android.content.Context
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
+import android.os.VibrationEffect
+import android.os.Vibrator
+import android.os.VibratorManager
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -14,6 +18,7 @@ import android.widget.Toast
 import androidx.core.app.NotificationCompat
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.lifecycleScope
+import androidx.preference.PreferenceManager
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.snackbar.Snackbar
@@ -37,14 +42,18 @@ class ChatFragment : Fragment() {
     private lateinit var mAdapter: MissatgesAdapter
     private val firestoreManager: FirestoreManager by lazy { FirestoreManager() }
 
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentChatBinding.inflate(inflater, container, false)
 
+        val sharedPreferences = PreferenceManager.getDefaultSharedPreferences(requireContext())
+
         binding.btnEnviarMiss.setOnClickListener{
-            var nom = authManager.getEmail()
+            var nomDef = authManager.getEmail().toString()
+            var nom = sharedPreferences.getString("usernameChat", nomDef)
             var missatge = binding.missatge.text.toString()
             enviarMissatge(nom!!, missatge)
             binding.missatge.setText("")
@@ -113,7 +122,12 @@ class ChatFragment : Fragment() {
             .setSmallIcon(R.mipmap.ic_launcher)
             .setAutoCancel(true)
             .setContentIntent(pendingIntent)
+        val sharedPreferences = PreferenceManager.getDefaultSharedPreferences(requireContext())
+        val vibrateEnabled = sharedPreferences.getBoolean("vibrate", false)
 
+        if (vibrateEnabled) {
+            vibrate()
+        }
         val manager = ContextCompat.getSystemService(requireContext(), NotificationManager::class.java) as NotificationManager
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
@@ -123,6 +137,25 @@ class ChatFragment : Fragment() {
             manager.createNotificationChannel(channel)
         }
         manager.notify(1,notificationBuilder.build())
+    }
+
+    private fun vibrate(){
+        var vibrator: Vibrator
+        if(Build.VERSION.SDK_INT>=31){
+            val vibratorManager = requireActivity().getSystemService(Context.VIBRATOR_MANAGER_SERVICE) as VibratorManager
+            vibrator = vibratorManager.defaultVibrator
+        }else{
+            @Suppress("DEPRECATION")
+            vibrator = requireActivity().getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
+        }
+
+        val mVibratePattern = longArrayOf(0, 400, 200, 400)
+        if(Build.VERSION.SDK_INT >=26){
+            vibrator.vibrate(VibrationEffect.createWaveform(mVibratePattern, -1))
+        }else{
+            @Suppress("DEPRECATION")
+            vibrator.vibrate(mVibratePattern, -1)
+        }
     }
 
 
