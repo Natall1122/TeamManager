@@ -32,6 +32,17 @@ class MainActivity : AppCompatActivity(), EventsFragment.OnButtonsClickedListene
         setContentView(binding.root)
         setSupportActionBar(binding.myToolbar)
         binding.bottomNavigation.setOnItemSelectedListener(this)
+
+        if(ContextCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED){
+            ActivityCompat.requestPermissions(
+                this,
+                arrayOf(Manifest.permission.POST_NOTIFICATIONS),
+                12345)
+        }else {
+            Toast.makeText(this, "Permission already granted", Toast.LENGTH_SHORT).show()
+        }
+
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
