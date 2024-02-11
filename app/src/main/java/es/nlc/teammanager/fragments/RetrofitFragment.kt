@@ -7,20 +7,17 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
-import es.nlc.teammanager.R
-import es.nlc.teammanager.adapters.JokesAdapter
-import es.nlc.teammanager.clases.Jokes
-import es.nlc.teammanager.clases.RetrofitObject
-import es.nlc.teammanager.databinding.FragmentRememberBinding
+import es.nlc.teammanager.CatsInterface
+import es.nlc.teammanager.adapters.CatsAdapter
 import es.nlc.teammanager.databinding.FragmentRetrofitBinding
-import es.nlc.teammanager.jokesService
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 class RetrofitFragment : Fragment() {
     private lateinit var binding: FragmentRetrofitBinding
-    val jokes = mutableListOf<Jokes>()
+    val cats = mutableListOf<String>()
+    val productsAdapter = CatsAdapter( context, cats)
 
 
     override fun onCreateView(
@@ -32,14 +29,11 @@ class RetrofitFragment : Fragment() {
 
         lifecycleScope.launch(Dispatchers.IO){
             val call = RetrofitObject.getInstance()
-                .create(jokesService::class.java).getJokes()
-
+                .create(CatsInterface::class.java).getCats()
+            val response = call.body()
             withContext(Dispatchers.Main){
-                if(call.isSuccessful) {
-                    val info = call.body()!!
-                    jokes.clear()
-                    jokes.addAll(info)
-                    binding.recView.adapter?.notifyDataSetChanged()
+                withContext(Dispatchers.Main){
+                    updateCats(response!!.url)
                 }
             }
         }
@@ -48,11 +42,14 @@ class RetrofitFragment : Fragment() {
     }
 
     fun setReciclerView(){
-
-        val productsAdapter = JokesAdapter( context, jokes)
-
         binding.recView.adapter = productsAdapter
         binding.recView.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+    }
+
+    private fun updateCats(imatges: List<String>){
+        cats.clear()
+        cats.addAll(imatges)
+        binding.recView.adapter?.notifyDataSetChanged()
     }
 
 }
