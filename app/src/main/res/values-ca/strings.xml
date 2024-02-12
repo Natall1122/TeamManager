@@ -44,24 +44,24 @@
     <string name="donat">Permís donat, obrint galeria</string>
     <string name="navigation_drawer_open">Finestra de navegació oberta</string>
     <string name="navigation_drawer_close">Finestra de navegació tancada</string>
-    <string name="delete">BORRAR COMPTER</string>
+    <string name="delete">Borrar compte</string>
     <string name="dark_mode">Mode obscur</string>
     <string name="mc">MC</string>
     <string name="dc">DC</string>
     <string name="gk">POR</string>
     <string name="dfc">DFC</string>
     <string name="lb">LB</string>
-    <string name="logOut">LOG OUT</string>
+    <string name="logOut">tancant sessió....</string>
     <string name="working">ESTEM TREBALLANT EN ESTA FUNCIONALITAT, HO SENTIM</string>
-    <string name="del">BORRANT COMPTER....</string>
+    <string name="del">Borrant compter....</string>
     <string name="wuser">El usuari o la contrasenya son erronis, proba una altra vegada</string>
-    <string name="back">TANCAR SESSIÓ</string>
+    <string name="back">Tancar sessió</string>
 
 
     <string name="chat">Configuració del xat</string>
     <string name="chatUs">Nom del Usuari al xat</string>
     <string name="chatC">Color del xatr</string>
-    <string name="black">Negre</string>
+    <string name="red">Roig</string>
     <string name="green">Verd</string>
 
 
@@ -78,4 +78,5 @@
 
     <string name="gats">Gats</string>
     <string name="chats">Converses</string>
+    <string name="buscar">Buscar</string>
 </resources>

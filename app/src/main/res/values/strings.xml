@@ -43,7 +43,7 @@
     <string name="add">ADD</string>
     <string name="denegat">Permission denied, no access to the gallery.</string>
     <string name="donat">Permission granted, opening the gallery</string>
-    <string name="delete">DELETE ACOUNT</string>
+    <string name="delete">Delete acount</string>
     <string name="logOut">Logging out...</string>
     <string name="dark_mode">Dark mode</string>
     <string name="mc">CM</string>
@@ -53,14 +53,14 @@
     <string name="lb">LB</string>
     <string name="working">WE\'RE WORKING ON THIS FUNCIONALITY, SORRY</string>
     <string name="wuser">The User or password are wrong, try again</string>
-    <string name="del">DELETING ACOUNT....</string>
-    <string name="back">CLOSE SESSION</string>
+    <string name="del">deleting acount....</string>
+    <string name="back">closing session</string>
 
 
     <string name="chat">Chat config</string>
     <string name="chatUs">Chat username</string>
     <string name="chatC">Chat color</string>
-    <string name="black">Black</string>
+    <string name="red">Red</string>
     <string name="green">Green</string>
 
 
@@ -78,4 +78,5 @@
 
     <string name="gats">Cats</string>
     <string name="chats">Chats</string>
+    <string name="buscar">Search</string>
 </resources>

@@ -1,8 +1,8 @@
 <resources>
     <!-- Reply Preference -->
     <string-array name="colors_entries">
-        <item>Red</item>
-        <item>Green</item>
+        <item>@string/red</item>
+        <item>@string/green</item>
     </string-array>
 
     <string-array name="colors_values">

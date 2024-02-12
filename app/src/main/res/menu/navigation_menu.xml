@@ -26,7 +26,7 @@
         android:id="@+id/item_chat"
         android:enabled="true"
         android:icon="@drawable/chat"
-        android:title="@string/chat"/>
+        android:title="@string/chats"/>
 </menu>
 
 
