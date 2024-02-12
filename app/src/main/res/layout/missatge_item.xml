@@ -8,7 +8,6 @@
     android:layout_marginStart="8dp"
     android:layout_marginEnd="10dp"
     android:layout_marginTop="8dp"
-    android:backgroundTint="#FFEB3B"
     android:padding="10dp"
     app:cardCornerRadius="10dp"
     app:layout_constraintStart_toStartOf="parent"
@@ -24,7 +23,9 @@
             android:id="@+id/tvNom"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/claretP"
             android:text="NOM"
+            android:textStyle="bold"
             android:textSize="24sp" />
 
         <TextView
@@ -35,6 +36,7 @@
             android:nestedScrollingEnabled="false"
             android:singleLine="true"
             android:text="missatge"
+            android:textColor="@color/claretP"
             android:textSize="14sp" />
     </androidx.appcompat.widget.LinearLayoutCompat>
 </androidx.cardview.widget.CardView>

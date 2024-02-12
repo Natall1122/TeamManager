@@ -1,12 +1,12 @@
 <resources>
     <!-- Reply Preference -->
     <string-array name="colors_entries">
-        <item>Black</item>
+        <item>Red</item>
         <item>Green</item>
     </string-array>
 
     <string-array name="colors_values">
-        <item>#000</item>
-        <item>#D8E9A8</item>
+        <item>#7C1F1F</item>
+        <item>#4E9F3D</item>
     </string-array>
 </resources>

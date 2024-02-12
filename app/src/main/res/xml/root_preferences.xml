@@ -10,6 +10,7 @@
         <ListPreference
             app:defaultValue="#D8E9A8"
             app:entries="@array/colors_entries"
+            app:key="colorXat"
             app:entryValues="@array/colors_values"
             app:title="@string/chatC"
             app:useSimpleSummaryProvider="true" />
