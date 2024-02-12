@@ -5,7 +5,7 @@ import retrofit2.Response
 import retrofit2.http.GET
 
 interface CatsInterface {
-    @GET("search")
+    @GET("search?limit=10")
     suspend fun getCats(): Response<List<Cats>>
 
 }
