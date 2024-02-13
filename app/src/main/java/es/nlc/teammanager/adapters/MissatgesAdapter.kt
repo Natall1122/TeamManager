@@ -17,7 +17,7 @@ class MissatgesAdapter(
 ) : RecyclerView.Adapter<MissatgesAdapter.ViewHolder>() {
 
     private val sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context)
-    private val color = sharedPreferences.getString("colorXat", "#D8E9A8")
+    private val color = sharedPreferences.getString("colorXat", "#4E9F3D")
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.missatge_item, parent, false)

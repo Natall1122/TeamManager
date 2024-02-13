@@ -92,7 +92,7 @@ class ChatFragment : Fragment() {
                 withContext(Dispatchers.Main) {
 
                     if(inserted){
-                        enviarNotificacio(R.string.TitolNoti.toString(), R.string.BodyNoti.toString())
+                        enviarNotificacio("New Message", "You has a new message in the chat")
                     }else{
                         Toast.makeText(context, R.string.MissNo, Toast.LENGTH_SHORT).show()
                     }
