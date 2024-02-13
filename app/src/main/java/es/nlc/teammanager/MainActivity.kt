@@ -28,6 +28,7 @@ class MainActivity : AppCompatActivity(), EventsFragment.OnButtonsClickedListene
     private val authManager = AuthManager()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setTheme(R.style.Theme_TeamManager)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setSupportActionBar(binding.myToolbar)
@@ -38,10 +39,7 @@ class MainActivity : AppCompatActivity(), EventsFragment.OnButtonsClickedListene
                 this,
                 arrayOf(Manifest.permission.POST_NOTIFICATIONS),
                 12345)
-        }else {
-            Toast.makeText(this, "Permission already granted", Toast.LENGTH_SHORT).show()
         }
-
 
     }
 

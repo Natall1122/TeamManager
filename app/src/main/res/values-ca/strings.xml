@@ -79,4 +79,8 @@
     <string name="gats">Gats</string>
     <string name="chats">Converses</string>
     <string name="buscar">Buscar</string>
+
+    <string name="TitolNoti">Nou missatge</string>
+    <string name="BodyNoti">Tens un nou missatge en el xat</string>
+    <string name="MissNo">El missatge no s\'ha enviat</string>
 </resources>

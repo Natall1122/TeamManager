@@ -48,6 +48,7 @@ class RetrofitFragment : Fragment() {
                     if (isOfflineEnabled()) {
                         cats.clear()
                         cats.addAll(llistaTemporal)
+                        catDao.deleteAll()
                         saveToDatabase(cats)
                     }
 
@@ -64,9 +65,13 @@ class RetrofitFragment : Fragment() {
                 }
             }else{
                 lifecycleScope.launch(Dispatchers.IO) {
-                    val catsFromDatabase = catDao.getAll().value?.map { it.url } ?: emptyList()
+                    val catsString = mutableListOf<String>()
+                    catDao.getAll().forEach { element ->
+                        catsString.add(element.url)
+                    }
+
                 withContext(Dispatchers.Main) {
-                    updateCats(catsFromDatabase)
+                    updateCats(catsString)
                 }
             }
 

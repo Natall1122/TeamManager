@@ -71,7 +71,7 @@ class ChatFragment : Fragment() {
         binding.recMiss.adapter = mAdapter
 
         lifecycleScope.launch (Dispatchers.IO){
-            firestoreManager.getNotesFlow()
+            firestoreManager.getMissatgesFlow()
                 .collect{ notesUpdated ->
                     missatges.clear()
                     missatges.addAll(notesUpdated)
@@ -92,10 +92,9 @@ class ChatFragment : Fragment() {
                 withContext(Dispatchers.Main) {
 
                     if(inserted){
-                        Toast.makeText(context, "Insertat", Toast.LENGTH_SHORT).show()
-                        enviarNotificacion("Nuevo mensaje", "Has recibido un nuevo mensaje")
+                        enviarNotificacio(R.string.TitolNoti.toString(), R.string.BodyNoti.toString())
                     }else{
-                        Toast.makeText(context, "no insertat", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(context, R.string.MissNo, Toast.LENGTH_SHORT).show()
                     }
                 }
 
@@ -107,7 +106,7 @@ class ChatFragment : Fragment() {
         }
     }
 
-    private fun enviarNotificacion(titulo: String, cuerpo: String) {
+    private fun enviarNotificacio(titol: String, cos: String) {
         val intent = Intent(context, MainActivity::class.java).apply{
             flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         }
@@ -117,8 +116,8 @@ class ChatFragment : Fragment() {
         )
 
         val notificationBuilder = NotificationCompat.Builder(requireContext(), PushNotificationServices.CHANNEL_ID)
-            .setContentTitle(titulo)
-            .setContentText(cuerpo)
+            .setContentTitle(titol)
+            .setContentText(cos)
             .setPriority(NotificationCompat.PRIORITY_HIGH)
             .setSmallIcon(R.mipmap.ic_launcher)
             .setAutoCancel(true)

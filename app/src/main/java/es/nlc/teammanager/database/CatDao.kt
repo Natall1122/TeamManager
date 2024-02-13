@@ -11,6 +11,9 @@ interface CatDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertAll(cats: MutableList<CatEntity>)
 
+    @Query("DELETE FROM cats")
+    fun deleteAll()
+
     @Query("SELECT * FROM cats")
-    fun getAll(): LiveData<List<CatEntity>>
+    fun getAll(): List<CatEntity>
 }

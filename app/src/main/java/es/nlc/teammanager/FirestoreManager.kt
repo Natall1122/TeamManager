@@ -11,34 +11,33 @@ import kotlinx.coroutines.tasks.await
 class FirestoreManager {
 
     private val firestore by lazy { FirebaseFirestore.getInstance() }
-    private val auth = AuthManager()
 
     suspend fun addMissatge(note: Missatges): Boolean {
         return try {
-            firestore.collection(NOTE_COLLECTION).add(note).await()
+            firestore.collection(MISS_COLLECTION).add(note).await()
             true
         }catch(e: Exception){
             false
         }
     }
 
-    suspend fun getNotesFlow(): Flow<List<Missatges>> = callbackFlow{
-        var notesCollection: CollectionReference? = null
+    suspend fun getMissatgesFlow(): Flow<List<Missatges>> = callbackFlow{
+        var missCollection: CollectionReference? = null
         try {
-            notesCollection = FirebaseFirestore.getInstance()
-                .collection(NOTE_COLLECTION)
-            val subscription = notesCollection?.addSnapshotListener { snapshot, _ ->
+            missCollection = FirebaseFirestore.getInstance()
+                .collection(MISS_COLLECTION)
+            val subscription = missCollection?.addSnapshotListener { snapshot, _ ->
                 if (snapshot != null) {
-                    val notes = mutableListOf<Missatges>()
+                    val missatges = mutableListOf<Missatges>()
                     snapshot.forEach{
-                        notes.add(
+                        missatges.add(
                             Missatges(
-                                nom = it.get(NOTE_NOM).toString(),
-                                missatge = it.get(NOTE_CONTENT).toString()
+                                nom = it.get(MISS_NOM).toString(),
+                                missatge = it.get(MISS_CONTENT).toString()
                             )
                         )
                     }
-                    trySend(notes)
+                    trySend(missatges)
                 }
             }
             awaitClose { subscription?.remove() }
@@ -49,8 +48,8 @@ class FirestoreManager {
     }
 
     companion object{
-        const val NOTE_COLLECTION = "conversa"
-        const val NOTE_NOM = "nom"
-        const val NOTE_CONTENT = "missatge"
+        const val MISS_COLLECTION = "conversa"
+        const val MISS_NOM = "nom"
+        const val MISS_CONTENT = "missatge"
     }
 }

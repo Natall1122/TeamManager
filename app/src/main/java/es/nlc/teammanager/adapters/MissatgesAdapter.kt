@@ -17,7 +17,7 @@ class MissatgesAdapter(
 ) : RecyclerView.Adapter<MissatgesAdapter.ViewHolder>() {
 
     private val sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context)
-    private val color = sharedPreferences.getString("colorXat", "#D8E9A8") // Color per defecte
+    private val color = sharedPreferences.getString("colorXat", "#D8E9A8")
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.missatge_item, parent, false)
@@ -31,7 +31,6 @@ class MissatgesAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = items[position]
         holder.bindItem(item)
-        // Canviar el color de fons dels missatges
         holder.itemView.setBackgroundColor(Color.parseColor(color))
     }
 
